@@ -18,4 +18,13 @@ class Api::CheesesController < ApplicationController
     @cheese = Cheese.find_by(id: params[:id])
     render 'show.json.jb'
   end
+
+  def update
+    @cheese = Cheese.find_by(id: params[:id])
+    @cheese.name = params[:name] || @cheese.name
+    @cheese.price = params[:price] || @cheese.price
+    @cheese.description = params[:description] || @cheese.description
+    @cheese.save
+    render 'show.json.jb'
+  end
 end
