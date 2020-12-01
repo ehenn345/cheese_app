@@ -1,1 +1,7 @@
-{ message: "hello"}
+@cheeses.map do |cheese|
+  {
+    name: cheese.name,
+    price: cheese.price,
+    description: cheese.description,
+}
+end
