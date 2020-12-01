@@ -1,0 +1,5 @@
+{
+  name: @cheese.name,
+  price: @cheese.price,
+  description: @cheese.description,
+}
