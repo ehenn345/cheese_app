@@ -7,9 +7,9 @@ class Api::CheesesController < ApplicationController
 
   def create
     @cheese = Cheese.new(
-      name:"Cheddar", 
-      price:15, 
-      description: "Nice, orange color")
+      name: params[:name], 
+      price: params[:price],
+      description: params[:description])
     @cheese.save
     render 'show.json.jb'
   end
