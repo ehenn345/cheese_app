@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # end
   namespace :api do
     get "/cheeses" => "cheeses#index"
+    post "cheeses" => "cheeses#create"
     get "/cheeses/:id" => "cheeses#show"
   end
 
