@@ -27,4 +27,10 @@ class Api::CheesesController < ApplicationController
     @cheese.save
     render 'show.json.jb'
   end
+
+  def destroy
+    cheese = Cheese.find_by(id: params[:id])
+    cheese.destroy
+    render json: {message: "Cheese has been destroyed."}
+  end
 end
